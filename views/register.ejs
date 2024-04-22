@@ -1,0 +1,25 @@
+<%-  include('partials/header') %>
+
+<div class="container custom-container">
+    <div class="card custom-card" style="border: 4px solid black; background-color: #D04848;">
+        <div class="card-body">
+            <h1 class="text-center mb-4"><b style="color: #dbd7cf; margin-top: -10px; padding-top: 0px;">Sign Up</b> </h1>
+
+            <!-- Makes POST request to /login route -->
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" name="username" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password" style="margin-top: 30px;">Password</label>
+                    <input type="password" class="form-control" name="password" id="password" required>
+                </div>
+                <button type="submit" class="btn btn-dark btn-block custom-btn" style="margin-top: 30px; width: 90px;">Sign Up</button>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<%- include('partials/footer') %>

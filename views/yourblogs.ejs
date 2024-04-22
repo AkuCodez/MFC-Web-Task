@@ -1,0 +1,29 @@
+<%-  include('partials/headermain') %>
+
+<div class="container">
+    <h1> <b>Your Blogs</b></h1>
+    <% if (blogs.length > 0) { %>
+        <div id="c2" class="blog-container" >
+            <% blogs.forEach (blog => { %>
+                <div class="blog-post" style="border: 4px solid black;">
+                    <h2><%= blog.title %></h2>
+                    <p> <%= blog.content %> </p>
+                    <p class="date">Published on <%= formatDate(blog.created_at) %> by <%= blog.author %></p>
+                    <a href="/edit/<%= blog.id %>" style="text-decoration: none;"><button class="edit-button" aria-label="Edit Button">
+                        <img src="/images/edit.png" alt="Edit" class="edit-icon">
+                    </button> </a>
+                    <form action="/delete/<%= blog.id %>" method="POST" style="display: inline;">
+                    <button type="submit" class="edit-button" aria-label="Delete Button" onclick="return confirm('Are you sure you want to delete this blog post?');" style="margin-left: 10px;">
+                        <img src="/images/delete.png" alt="Delete" class="edit-icon">
+                    </button> 
+                    </form>
+                </div>
+            <% }); %>
+            
+        </div>
+    <% } else { %>
+        <p>No blogs found.</p>
+    <% } %>
+</div>
+
+<%- include('partials/footer') %>

@@ -1,0 +1,24 @@
+<%-  include('partials/headermain') %>
+
+
+<div class="blue-bg">
+    <div class="container" id="cform">
+        <h1 style="margin-bottom: 30px; color: #dbd7cf;">
+            <b>Create a Blog Post</b>
+        </h1>
+        <form action="/create" method="post" >
+            <label for="title">Title</label><br>
+            <input type="text" id="title" name="title" required><br><br>
+            
+            <label for="content" id="content">Content</label><br>
+            <textarea type="text" id="content" name="content" placeholder="Enter the content of the blog..." rows="4" cols="50" required></textarea><br><br>
+            
+            <label for="author" style="margin-top: -10px;">Author</label><br>
+            <input type="text" id="author" name="author" required><br><br>
+            
+            <input type="submit" value="Submit">
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>

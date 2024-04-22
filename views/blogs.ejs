@@ -1,0 +1,50 @@
+<%-  include('partials/headermain') %>
+
+
+<!-- <div class="container">
+    <h1> <b>All Blogs</b></h1>
+    <% if (blogs.length > 0) { %>
+        <div id="c2" class="blog-container" >
+            <% blogs.forEach (blog => { %>
+                <div class="blog-post" style="border: 4px solid black;">
+                    <h2>Blog Post</h2>
+                    <p> <%= blog.content %> </p>
+                    <p class="date">Published on <%= formatDate(blog.created_at) %> by <%= blog.author %></p>
+                </div>
+            <% }); %>
+        </div>
+    <% } else { %>
+        <p>No blogs found.</p>
+    <% } %>
+</div> -->
+
+<div class="container" style="max-width: 1160px; padding: 20px;">
+    <h1 style="text-align: center; margin-bottom: 30px;"><b>All Blogs</b></h1>
+    <% if (blogs.length > 0) { %>
+        <div id="blog-list" class="blog-container">
+            <% for (let i = 0; i < blogs.length; i += 2) { %>
+                <div class="blog-row">
+                    <% if (blogs[i]) { %>
+                        <div class="blog-post" style="border: 4px solid black;">
+                            <h2><%= blogs[i].title %></h2>
+                            <p><%= blogs[i].content %></p>
+                            <p class="date">Published on <%= formatDate(blogs[i].created_at) %> by <%= blogs[i].author %></p>
+                        </div>
+                    <% } %>
+                    <% if (blogs[i + 1]) { %>
+                        <div class="blog-post" style="border: 4px solid black;">
+                            <h2><%= blogs[i + 1].title %></h2>
+                            <p><%= blogs[i + 1].content %></p>
+                            <p class="date">Published on <%= formatDate(blogs[i + 1].created_at) %> by <%= blogs[i + 1].author %></p>
+                        </div>
+                    <% } %>
+                </div>
+            <% } %>
+        </div>
+    <% } else { %>
+        <p>No blogs found.</p>
+    <% } %>
+</div>
+
+
+<%- include('partials/footer') %>

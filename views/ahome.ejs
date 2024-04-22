@@ -1,13 +1,12 @@
-<%-  include('partials/header') %>
+<%-  include('partials/headermain') %>
 
 <div class="container py-4">
-
 
     <div class="p-5 mb-4 bg-body-tertiary rounded-3" id="home1" style="border: 4px solid black;">
       <div class="container-fluid py-5">
         <h1 class="display-5 fw-bold">Seeking Knowledge.</h1>
         <p class="col-md-8 fs-4">"Unleash Your Voice, Inspire the World: Blog with Us!".</p>
-        <!-- <button class="btn btn-primary btn-lg" type="button" style="background-color: black; border: black;">Read more</button> -->
+        <button class="btn btn-primary btn-lg" type="button" style="background-color: black; border: black;">Read more</button>
       </div>
     </div>
     <div class="container" id="c2" >
@@ -23,17 +22,6 @@
           <h3> <%= latestBlog2.title %> </h3>
           <p><%= latestBlog2.content %> </p>
           <p class="date">Published on <%= formattedDate2 %> by <%= latestBlog2.author %></p>
-      </div>
-    </div>
-    <div class="text-center mt-4">
-      <a href="/blogs"><button class="btn btn-dark btn-lg mb-3">Click Here to Explore More Blogs!</button></a>
-    </div>
-
-    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary" style="border: 4px solid black; background-color: #D04848 !important;">
-      <div class="col-lg-6 px-0">
-        <h1 class="display-4 fst-italic">Want to create your own blogs??</h1>
-        <p class="lead my-3"><b> We offer many blog functionalities like creating your own blogs, editing them whenever you want, deleting and also viewing them in future! </b></p>
-        <p class="lead mb-0"><a href="/register" class="text-body-emphasis fw-bold">Sign Up here...</a></p>
       </div>
     </div>
 </div>

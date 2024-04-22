@@ -1,0 +1,188 @@
+body {
+    background-color: #F28585 !important;
+
+}
+
+.blue-bg {
+    background-color: #F28585;
+    min-height: 100vh; /* Ensures the blue background covers the entire viewport height */
+    display: flex;
+    justify-content: center; /* Centers the container horizontally */
+    align-items: center; /* Centers the container vertically */
+}
+hr {
+}
+
+#home1 {
+    background-color: #D04848 !important; 
+}
+
+#cform {
+    background-color: #D04848;
+    padding: 20px;
+    border-radius: 10px;
+    border: solid 5px black;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+form {
+    text-align: center;
+    font-size: 21px;
+}
+
+label {
+    display: inline-block;
+    width: 100px; /* Adjust as needed */
+    font-weight: bold;
+    text-align: center;
+    color: black;
+}
+#content {
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 120px); /* Adjust as needed */
+    padding: 8px;
+    margin-top: 10px;
+    border-width: 4px;
+    margin-bottom: -8px;
+    border: solid 5px black;
+    border-radius: 8px;
+    font-size: inherit; /* Inherits font-size from parent */
+}
+input[type="submit"] {
+    width: 40%; /* Makes submit button full width */
+    padding: 10px;
+    background-color: black;
+    border: black;
+    color: #dbd7cf;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: inherit; /* Inherits font-size from parent */
+}
+input[type="submit"]:hover {
+    background-color: rgb(39, 36, 36);
+}
+
+footer {
+    margin-bottom: 0px;
+    padding-bottom: -40px !important;
+}
+.edit-button {
+    position: relative; /* Position relative for absolute tooltip positioning */
+    display: inline-block;
+    color: white; /* Text color */
+    border: none;
+    padding: 6px 10px; /* Padding around the button content */
+    border-radius: 50%; /* Rounded border to make a circle */
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 123, 255, 0.3); /* Optional shadow effect */
+}
+
+.edit-icon {
+    width: 30px; /* Width of the plus sign icon */
+    height: 30px; /* Height of the plus sign icon */
+    display: block;
+}
+
+.edit-button::after {
+    content: attr(aria-label); /* Use aria-label attribute value as content */
+    position: absolute;
+    top: 50px; /* Position the tooltip above the button */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%);
+    background-color: black;
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.edit-button:hover::after {
+    opacity: 1; /* Show tooltip on hover */
+}
+
+.blog-post {
+    flex-basis: calc(50% - 10px); /* Each blog post occupies 50% minus gap */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+#blog-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; /* Adjust the gap between blog posts */
+}
+.blog-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px; /* Add space between rows */
+}
+.blog-post h2 {
+    margin-top: 0;
+}
+.blog-post p {
+    margin-bottom: 10px;
+}
+.blog-post .date {
+    font-style: italic;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: space-between; /* Distribute items evenly */
+    flex-wrap: wrap; /* Enable wrapping to next line */
+}
+.blog-post2 {
+    width: calc(50% - 20px);
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 4px solid black;
+    box-sizing: border-box;
+}
+.clearfix {
+    clear: both;
+}
+
+#c2 {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+}
+
+.custom-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.custom-card {
+    width: 100%;
+    border: 4px solid black;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+    max-width: 700px;
+    padding: 20px;
+}
+.custom-form-control {
+    height: 50px; /* Increase height of input fields */
+    border-radius: 8px; /* Rounded corners for input fields */
+}
+
+.custom-card h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
