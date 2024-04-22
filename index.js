@@ -44,7 +44,7 @@ function formatDate(dateTimeStr) {
     return date.toLocaleDateString('en-US', options);
   }
 
-app.get("https://mfc-web-task.vercel.app/", async (req, res) => {
+app.get("/", async (req, res) => {
     if (req.isAuthenticated()) {
         console.log('User authenticated');
       } else {
